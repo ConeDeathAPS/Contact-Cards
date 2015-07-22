@@ -9,18 +9,20 @@
 	<script>
 
 	$(document).ready(function(){
-		$('.card .des').hide();
 		$('form').submit(function(){
 			var arr = $(this).serializeArray();
+			console.log(arr);
 			$('#cards').append('<div class="card"></div>');
 			$('.card:last').append('<h3><u>New Card</u></h3><h4>First Name:</h4><p>', arr[0].value,'</p><h4>Last Name:</h4><p>', arr[1].value,'</p><h4>Description:</h4><p class="des">', arr[2].value,'</p>');
+			$('.card:last .des').hide();
 		return false;
 		});
 		$('.card .des').hide();
 	})
-		
+	$('.card .des').hide();
 	$(document).on('click', '.card', function(){
-		$('.des').show();
+		event.stopPropagation();
+		$('.des').toggle();
 	})
 
 
@@ -45,7 +47,7 @@
 					Description: <textarea name="description"></textarea>
 				</label>
 				<label>
-					<input type="submit" name="submit" value="Submit!">
+					<input type="submit" id="submit" value="Submit!">
 				</label>
 			</form>
 		</div>

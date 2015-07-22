@@ -6,6 +6,7 @@
 #container {
 	width: 600px;
 	margin: 0px auto;
+	background-color: lightgray;
 }
 #header {
 	height: 50px;
@@ -16,7 +17,7 @@
 #form {
 	background-color: lightblue;
 	display: inline-block;
-	height: 300px;
+	height: 210px;
 	width: 300px;
 	margin: 5px;
 }
@@ -25,19 +26,26 @@
 		float: right;
 		margin: 5px;
 	}
+	#submit {
+		background-color: darkblue;
+		color: white;
+		font-weight: bold;
+		padding: 3px;
+		border: 1px solid darkblue;
+		border-radius: 4px;
+	}
 #cards {
-	background-color: lightgray;
 	display: inline-block;
 	width: 270px;
 	float: right;
 	margin: 5px;
 }
 	.card {
-		height: 200px;
-		width: 258px;
+		height: 210px;
+		width: 260px;
 		display: inline-block;
 		background-color: lightblue;
-		margin: 5px;
+
 	}
 	.card h3 {
 		text-align: center;
