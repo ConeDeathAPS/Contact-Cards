@@ -1,0 +1,44 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	font-family: sans-serif;
+}
+#container {
+	width: 600px;
+	margin: 0px auto;
+}
+#header {
+	height: 50px;
+	background-color: blue;
+	width: 600px;
+	color: white;
+}
+#form {
+	background-color: lightblue;
+	display: inline-block;
+	height: 300px;
+	width: 300px;
+	margin: 5px;
+}
+	#form label {
+		display: inline-block;
+		float: right;
+		margin: 5px;
+	}
+#cards {
+	background-color: lightgray;
+	display: inline-block;
+	width: 270px;
+	float: right;
+	margin: 5px;
+}
+	.card {
+		height: 200px;
+		width: 258px;
+		display: inline-block;
+		background-color: lightblue;
+		margin: 5px;
+	}
+	.card h3 {
+		text-align: center;
+	}

@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Contact Card</title>
+	<meta name="Contact Card" content="Store info about your friends!">
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+
+	$(document).ready(function(){
+		$('.card .des').hide();
+		$('form').submit(function(){
+			var arr = $(this).serializeArray();
+			$('#cards').append('<div class="card"></div>');
+			$('.card:last').append('<h3><u>New Card</u></h3><h4>First Name:</h4><p>', arr[0].value,'</p><h4>Last Name:</h4><p>', arr[1].value,'</p><h4>Description:</h4><p class="des">', arr[2].value,'</p>');
+		return false;
+		});
+		$('.card .des').hide();
+	})
+		
+	$(document).on('click', '.card', function(){
+		$('.des').show();
+	})
+
+
+	</script>
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<h2>Contact Cards</h2>
+		</div>
+		<div id="form">
+			<h3>Instructions</h3>
+			<p>Please fill out the form and include a brief description, then click the submit button.</p>
+			<form id="info">
+				<label>
+					First Name: <input type="text" name="first_name">
+				</label>
+				<label>
+					Last Name: <input type="text" name="last_name">
+				</label>
+				<label>
+					Description: <textarea name="description"></textarea>
+				</label>
+				<label>
+					<input type="submit" name="submit" value="Submit!">
+				</label>
+			</form>
+		</div>
+		<div id="cards">
+			<div class="card">
+				<h3><u>Demo Card</u></h3>
+				<h4>First Name:</h4><p>Coding</p>
+				<h4>Last Name:</h4><p>Dojo</p>
+				<h4>Description:</h4><p class='des'>A great place to go where they teach you to code like a ninja!</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
